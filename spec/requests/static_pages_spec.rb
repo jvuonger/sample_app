@@ -46,6 +46,9 @@ describe "StaticPages" do
 
 		visit root_path
 
+		click_link "Sign in"
+		page.should have_selector 'title', text: full_title('Sign in')
+
 		click_link "About"
 		should have_selector 'title', text:full_title('About Us')
 
